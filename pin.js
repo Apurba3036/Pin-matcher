@@ -55,28 +55,32 @@ document.getElementById("verify-pin").addEventListener("click", function () {
     const currentpin = displaypinfield.value;
     const typednumfield = document.getElementById("typed-num");
     const currenttypednum = typednumfield.value;
+    
+    let trynum = parseInt(document.getElementById("try").innerText);
 
     if (currenttypednum === currentpin) {
         // alert('Correct pin',currenttypednum);
-        let tryCount = Number(document.getElementById("try").innerText);
-        if (tryCount > 0) {
+
+        if (trynum > 0) {
             const pinsuccess = document.getElementById("pin-success");
             alert(pinsuccess.innerText);
             typednumfield.value = "";
             document.getElementById("try").innerText = 3;
         } else {
-            alert("Account Locked");
+            alert("Your Account is Locked");
         }
-    } else {
-        let trynumstr = document.getElementById("try").innerText;
-        let trynum = parseInt(trynumstr);
+    } 
+    
+    else {
+        
         if (trynum === 0) {
-            alert("Account Locked");
+            alert("Your Account is Locked");
         } else {
             const pinFailed = document.getElementById("pin-failed");
             alert(pinFailed.innerText);
-            let newtrynum = trynum - 1;
+            const newtrynum = trynum - 1;
             document.getElementById("try").innerText = newtrynum;
+            typednumfield.value = "";
         }
     }
 });
