@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin matcher</title>
+    
+    <!-- bootsrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+
+<body>
+    <nav class="navbar bg-dark" data-bs-theme="dark">
+
+        <img id="nav-img"src="https://www.logo.wine/a/logo/BKash/BKash-Icon2-Logo.wine.svg" alt="">
+        <!-- Navbar content -->
+        <h1 id="head" style="text-align: center;margin:0 auto;" >Pin Generator and Matcher</h1>
+      </nav>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+              <div class="pin-generator half-width">
+                <input  type="text" class="form-control" id="display-pin" readonly>
+                <button id="generatepin" type="button" class="btn btn-primary btn-lg">Generate Pin</button>
+
+              </div>
+
+
+            </div>
+
+            <div class="col-md-6">
+               <div class="input-section half-width" >
+                <input  type="text" class="form-control" id="typed-num" readonly>
+                
+                <div id="calculator-body" class="calculator">
+                    <div class="calculator-btn-row">
+                        <div class="button">7</div>
+                        <div class="button">8</div>
+                        <div class="button">9</div>
+                    </div>
+                    <div class="calculator-btn-row">
+                        <div class="button">4</div>
+                        <div class="button">5</div>
+                        <div class="button">6</div>
+                    </div>
+                    <div class="calculator-btn-row">
+                        <div class="button">1</div>
+                        <div class="button">2</div>
+                        <div class="button">3</div>
+                    </div>
+                    <div class="calculator-btn-row">
+                        <div class="button"><</div>
+                        <div class="button">0</div>
+                        <div class="button">C</div>
+                    </div> <br><br>
+
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button id="verify-pin" class="btn btn-primary" type="button">Submit</button>
+                         
+                    </div> <br>
+
+                    <div class="text">
+                         <p>Try left :<span id="try">3</span> </p>
+                    </div>
+
+                </div>
+
+               </div>
+
+
+               
+               
+            </div>
+
+            <div class="notify-section">
+               <p id="pin-failed"class="notify">❌ Pin Didn't Match, Please try again</p>
+               <p id="pin-success" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+           </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+
+    <!-- js file -->
+<script src="/pin.js"></script>
+
+</body>
+</html>
+
+
